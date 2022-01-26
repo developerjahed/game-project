@@ -1,3 +1,49 @@
+@media (max-width: 1800px) {
+
+	/*=========================*/
+	/* REUSEBLE COMPONENTS */
+	/*=========================*/
+
+	
+
+	/*=====================*/
+	/* START  Hero sSECTION */
+	/*=====================*/
+    .hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -60%;
+		right: -57%;
+	}
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+	/*=====================*/
+	/*  SECTION */
+	/*=====================*/
+
+}
+
 @media (max-width: 1599px) {
 
 	/*=========================*/
@@ -9,7 +55,12 @@
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
-
+    .hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -70%;
+	}
+	
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
@@ -45,7 +96,7 @@
 	/*=========================*/
 	/* REUSEBLE COMPONENTS */
 	/*=========================*/
-
+    
 	
 
 	/*=====================*/
@@ -82,7 +133,7 @@
 
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1299px) {
 
 	/*========================*/
 	/* REUSEBLE COMPONENTS */
@@ -92,7 +143,11 @@
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
-
+	.hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -78%;
+	}
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
@@ -122,7 +177,13 @@
 	/*=====================*/
 
 }
-
+@media (max-width: 1299px) {
+	.hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -89%;
+	}
+}
 @media (max-width: 991px) {
 
 	/*========================*/
@@ -199,7 +260,32 @@
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
-
+	.hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -130%;
+	}
+	.hero-sec-content {
+		margin-left: 0;
+		margin-bottom: 10px;
+		padding: 1px 0px;
+	}
+	.hero-bottom-sec-hlc {
+		position: absolute;
+		top: 15%;
+		display: none;
+	}
+	.hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -170%;
+		display: none;
+	}
+	.hero-sec-extra-content-gta img {
+		position: absolute;
+		bottom: 19%;
+		display: none;
+	}
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
@@ -248,7 +334,11 @@
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
-
+	.hero-sec-extra-content-tree img {
+		position: absolute;
+		top: -68%;
+		right: -170%;
+	}
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
