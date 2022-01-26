@@ -70,7 +70,7 @@ h4,
 h5,
 h6
 {
-	font-family: 'Nunito', sans-serif;
+	font-family: 'Akrobat';
 }
 
 
@@ -542,7 +542,65 @@ header{
 /*==============================*/
 /*-- START  About SECTION --*/
 /*==============================*/
-
+.about-section{
+	background-image: url(../images/about-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: grid;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0;
+	height: 100vh;
+}
+.about-header h1{
+	font-style: normal;
+    font-weight: 900;
+   font-size: 86px;
+   line-height: 115px;
+   text-transform: uppercase;
+   text-align: center;
+   color: #6B1CD5;
+}
+.about-header h1 c{
+	color: rgb(255, 255, 255);
+}
+.about-header h1 span{
+	color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.472);
+}
+.toggle .tabs{
+	width: 100%;
+	overflow: hidden;
+  }
+  .toggle .tabs .tab {
+	cursor: pointer;
+  }
+  
+  .toggle .panels .panel {
+	padding: 20px 10px;
+	display: none;
+  }
+  .toggle .panels .panel:first-child {
+	display: block;
+  }
+  .about-tab{
+	background-image: url(../images/about-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: grid;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0; 
+	height: 200px;
+	width: 200px;
+  }
 /*==============================*/
 /*-- END About SECTION --*/
 /*==============================*/
