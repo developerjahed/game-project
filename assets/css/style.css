@@ -1,0 +1,646 @@
+/*======================================================*/
+/*--------------------------------------------------------
+
+Usually, the font size in HTML is 16px or 1rem by default ( 16px = 1rem ).  
+Here in HTML, I have given Font Size 10px by default and here I have used REM as a Unit.  
+10px = 1rem.  
+
+I will give some more examples of px and rem, for example:-------
+1px   	=   .1rem
+2px		=	.2rem
+3px		=	.3rem
+4px		=	.4rem
+5px		=	.5rem
+6px 	= 	.6rem
+7px 	= 	.7rem
+8px 	= 	.8rem
+9px   	=   .9rem 
+10px  	=   1rem 
+15px 	=  	1.5rem 
+18px 	=  	1.8rem 
+20px 	= 	2rem
+27px 	= 	2.7rem;
+30px 	=  	3rem 
+35px 	=  	3.5rem
+
+----------------------------------------------------------*/
+/*=========================================================*/
+
+
+/*===================*/
+/*-- VARIABLES --*/
+/*===================*/
+:root {
+	--paragraph: 16px;
+	--primary-color: #FF5421;
+	--secondary-color: #FFFFFF;
+}
+
+/*===================*/
+/*-- VARIABLES --*/
+/*===================*/
+
+html {
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #ffffff;
+	font-family: 'Akrobat';
+	line-height: 14px;
+}
+
+/*==============================*/
+/*-- REUSEBLE COMPONENTS --*/
+/*==============================*/
+section {
+}
+
+.bg-color {
+	background: #FFEDEC;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+/*==============================*/
+/*-- REUSEBLE COMPONENTS --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START HEADER SECTION --*/
+/*==============================*/
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #0e0e0e00;
+	padding: 20px 0;
+	z-index: 90;
+}
+
+.logo a .logo-img {
+	max-width: 267px;
+}
+
+.main-menu li a {
+	font-weight: 600;
+	color: white;
+}
+
+.main-menu li:last-of-type {
+	position: relative;
+	height: 2.1rem;
+	line-height: 2.1rem;
+	text-align: center;
+	margin-top: .5rem;
+	margin-right: 0;
+}
+
+/*- HAMBURGER MENU ICON -*/
+.menu-show-icon {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 9999999;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 37px;
+	height: 6px;
+	background: white;
+	margin: 5px 0;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	-ms-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-10px, -7px);
+	-ms-transform: rotate(45deg) translate(-10px, -7px);
+	transform: rotate(45deg) translate(-10px, -7px);
+}
+
+/*--- SEARCH BAR ---*/
+.header-search-wrapper {
+	position: relative;
+}
+
+.search-main > i,
+.search-main span {
+	font-size: 2rem;
+	cursor: pointer;
+	color: var(--secondary-color);
+	display: none;
+}
+
+.search-main span {
+	display: none;
+}
+
+.header-search-wrapper .search-form-main {
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	background: var(--secondary-color);
+	-webkit-box-shadow: 1px 1px 7px rgba(0, 0, 0, .15);
+	box-shadow: 1px 1px 7px rgba(0, 0, 0, .15);
+	border-top: 3px solid #d33;
+	padding: 2rem;
+	position: absolute;
+	right: 0;
+	top: 230%;
+	width: 35rem;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+}
+
+.header-search-wrapper .search-form-main::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.search-form-main.active-search {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .4s ease-in;
+	-o-transition: all .4s ease-in;
+	transition: all .4s ease-in;
+}
+
+.header-search-wrapper .search-form-main:before {
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-bottom: 1rem solid #d33;
+	content: "";
+	position: absolute;
+	right: 1.5rem;
+	top: -1rem;
+}
+
+.header-search-wrapper .search-form-main .search-field {
+	border-radius: 0;
+	padding: 0px 10px;
+	width: 85%;
+	height: 4rem;
+	float: left;
+	display: block;
+	border: .2rem solid #d33;
+	font-size: 1.6rem;
+}
+
+.header-search-wrapper .search-form-main .search-submit {
+	cursor: pointer;
+	width: 15%;
+	font-size: 1.6rem;
+	height: 4rem;
+	background: #d33;
+	color: var(--secondary-color);
+	float: right;
+	border: .2rem solid #d33;
+}
+
+/*-- STICKY MENU --*/
+.sticky-menu {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #07070705;
+	z-index: 99999999999;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	z-index: 99999;
+}
+.sticky-menu .bar1{
+	background: var(--primary-color);
+}
+.sticky-menu .bar2{
+	background: var(--primary-color);
+}
+
+.sticky-menu .bar3{
+	background: var(--primary-color);
+}
+
+.sticky-menu .main-menu li a {
+	color: var(--primary-color);
+}
+
+.sticky-menu .main-menu .search-main i {
+	color: #d1ccc0;
+}
+.logo-2{
+	display: none;
+}
+.sticky-menu .logo-2{
+	display: block;
+}
+.sticky-menu .logo-1{
+	display: none;
+}
+
+.sticky-menu .main-menu li a{
+	color: white;
+}
+
+/*==============================*/
+/*-- END HEADER SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START HERO SECTION --*/
+/*==============================*/
+header{
+	background-image: url(../images/hero-cover.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: grid;
+	align-items: center;
+	z-index: 98;
+	overflow: hidden;
+	background-position: center;
+	height: 100vh;
+}
+.nav-menu-btn1{
+    background: rgba(255, 255, 255, 0.05);
+	padding: 15px 30px;
+	font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+	font-weight: 900;
+}
+.nav-menu-btn2{
+	background: linear-gradient(90deg, #6617CC 0%, #8133FF 100%);
+    box-shadow: inset 0px 0px 11px #A972FF;
+	font-weight: 700;
+	padding: 15px 30px;
+	line-height: 17px;
+}
+.hero-section{
+	position: relative;
+}
+.hero-sec-social-icon{
+	transform: rotate(-5deg);
+	margin-left: 111px;
+	margin-top: -86px;
+}
+.hero-sec-social-icon img{
+	margin-top: -250px;
+	transform: rotate(5deg);
+	width: 30px;
+}
+.hero-sec-social-icon ul li{
+	display: inline-block;
+	width: 80px;
+	height: 62px;
+	text-align: center;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: -17px;
+	}
+ .hero-sec-social-icon ul li a img{
+   margin-top: 17px;
+ }
+ .hero-sec-social-icon-1{
+	background: linear-gradient(66.67deg, #535CA7 26.85%, #8866D0 99.27%);
+	box-shadow: 0px 4px 34px rgba(35, 55, 232, 0.25);
+ }
+.hero-sec-social-icon-2{
+	background: linear-gradient(66.67deg, #1F70EA 26.85%, #667DD0 99.27%);
+    box-shadow: 0px 4px 34px rgba(35, 102, 232, 0.25);
+}
+.hero-sec-social-icon-3{
+	background: linear-gradient(66.67deg, #EA501F 26.85%, #D06666 99.27%);
+    box-shadow: 0px 4px 34px rgba(232, 81, 35, 0.25);
+}
+.hero-sec-content h1{
+	font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 115px;
+    text-transform: uppercase;
+    color: white;
+}
+.hero-sec-content p{
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	color: #fff;
+	width: 50%;
+}
+.hero-sec-content{margin-left: 97px;margin-bottom: 63px;padding: 33px 30px;}
+.hero-sec-btn a{
+	background: linear-gradient(90deg, #9A5413 0%, #D9A729 100%);
+    box-shadow: 0px 10px 57px -11px #F8D247, inset 0px 0px 86px #FFE872;
+	padding: 20px 60px;
+	color: white;
+	margin-top: 10px;
+}
+.hero-sec-man-images img{
+	position: absolute;
+}
+.hero-sec-man-1{
+	bottom: 0;
+	right: 20%;
+	width: 35%;
+	z-index: 9;
+}
+.hero-sec-man-2{
+	bottom: 0;
+	right: 0%;
+	width: 35%;
+}
+.scroll-down{
+	position: absolute;
+	bottom: -3px;
+	left: 53px;
+	border: 1px solid rgba(255, 255, 255, 0.459);
+	padding: 5px 5px 0px 5px;
+}
+.scroll-down-box{
+	width: 100px;
+	padding: 20px 0px;
+	text-align: center;
+	clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
+	border: 1px solid white;
+	background: linear-gradient(142.42deg, #FFDA55 -2.77%, #D9A729 94.72%);
+}
+.scroll-down svg{
+	margin-top: 15px;
+	width: 30px;
+}
+.scroll-down p{
+	line-height: 18px;
+	color: white;
+
+}
+.hero-sec-extra-content-gta img{
+	position: absolute;
+	bottom: 19%;
+}
+.hero-sec-content-bg{
+	background-image: url(../images/banner-content-bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	width: ;
+	display: grid;
+	padding: 84px 0px;
+	width: 113%;
+}
+.hero-sec-extra-content-tree img{
+	position: absolute;
+	top: -20%;
+	right: -43%;
+}
+/*==============================*/
+/*-- END HERO SECTION --*/
+/*==============================*/
+.hero-bottom-section{
+	background-image: url(../images/hero-bottom-sec.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: grid;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0;
+	height: 100vh;
+}
+.product-box{
+	display: flex;
+	align-items: center;
+	background: linear-gradient(90deg, rgba(102, 23, 204, 0.95) -25.08%, rgba(129, 51, 255, 0.95) 199.17%);
+	clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 62% 100%, 75% 25%, 46% 70%, 20% 70%, 62% 100%, 80% 100%, 100% 0%);
+	padding: 13px 5px;
+	margin: 5px 0px;
+	margin-left: -50px;
+}
+.product-box-left img{
+	padding: 5px;
+	width: 153px;
+	height: 154px;
+}
+.product-box-right h3{
+	color: white;
+	line-height: 22px;
+}
+.product-box-right p{
+	color: white;
+	width: 76%;
+	margin-top: 10px;
+	line-height: 18px;
+}
+.gun-box-left-content{
+
+}
+.gun-box-left{
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/test.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+	min-height: 452px;
+}
+.gun-box-images{
+	width: 100%;
+	text-align: center;
+}
+.gun-box-images-left img{
+	text-align: center;
+	width: 272px;
+	margin-top: 9px;
+}
+.gun-box-text{
+	margin-top: 50px;
+	padding-top: 58px;
+	padding-left: 73px;
+}
+.gun-box-text h3{
+	color: white;
+	line-height: 22px;
+}
+.gun-box-text p{
+	color: white;
+	width: 76%;
+	margin-top: 10px;
+	line-height: 18px;
+}
+.mt-lg-100{
+	margin-top: 100px;
+}
+.gun-box-right{
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/gun-box-right.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+	min-height: 451px;
+	margin-left: -77px;
+}
+.gun-box-images-right img{
+	width: 533px;
+	height: 460px;
+	margin-left: -183px;
+}
+.gun-box-right-content{
+	margin: 10px;
+}
+.hero-bottom-sec-hlc{
+	position: absolute;
+	top: 15%;
+}
+.hero-bottom-sec-car{
+	position: absolute;
+	bottom: 0;
+}
+
+/*==============================*/
+/*-- START  About SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END About SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START  SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END  SECTION --*/
+/*==============================*/
+
+
+/*==============================*/
+/*-- START FOOTER SECTION --*/
+/*==============================*/
+
+/*==============================*/
+/*-- END FOOTER SECTION --*/
+/*==============================*/
+
+
+/*====================*/
+/*-- Back to top --*/
+/*====================*/
+#up-btn {
+	opacity: 0;
+	position: fixed;
+	bottom: 5%;
+	right: 2%;
+	z-index: 99;
+	font-size: 16px;
+	background: darkblue;
+	color: #FFFFFF;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+
+#up-btn:hover {
+	
+}
+.bar-color{
+	background: white !important;
+}
