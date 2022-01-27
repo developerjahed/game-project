@@ -672,8 +672,30 @@ header{
 .about-left-img img{
 	position: absolute;
 	left: 40px;
-	bottom: -49px;
+	bottom: -149px;
 }
+.about-tab-box{
+	position: relative;
+}
+.tab1{
+	position: absolute;
+    width: 330px;
+    right: 56%;
+    top: 20px;
+}
+.tab2{
+	position: absolute;
+	width: 330px;
+	right: 62%;
+	top: 227px;
+}
+.tab3{
+	position: absolute;
+    width: 330px;
+    right: 68%;
+    top: 430px;
+}
+
 /*==============================*/
 /*-- END About SECTION --*/
 /*==============================*/

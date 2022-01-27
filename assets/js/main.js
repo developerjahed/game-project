@@ -10,31 +10,6 @@ $(document).ready(function () {
 	});
 
 	
-	// SHOW & HIDE MENU //
-	$(".menu-show-icon").click(function () {
-		$(".main-menu").toggleClass("main-menu-show");
-		$(".bar1").toggleClass("bar-color");
-		$(".bar2").toggleClass("bar-color");
-		$(".bar3").toggleClass("bar-color");
-	});
-
-	
-	// TOGGLE SEARCH BAR //
-	$('.header-search-wrapper .search-main > i').click(function () {
-		$(".header-search-wrapper .search-main > i").hide();
-		$(".header-search-wrapper .search-main span").show();
-		$('.search-form-main').addClass('active-search');
-		$('.search-form-main .search-field').focus();
-	});
-
-	$('.header-search-wrapper .search-main span').click(function () {
-		$(".header-search-wrapper .search-main > i").show();
-		$(".header-search-wrapper .search-main span").hide();
-		$('.search-form-main').removeClass('active-search');
-		$('.search-form-main .search-field').focus();
-	});
-	
-
 	// WOW JS 
 	new WOW().init();
 
