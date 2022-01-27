@@ -14,37 +14,27 @@
 		top: -60%;
 		right: -57%;
 	}
+	.hero-bottom-sec-car {
+		position: absolute;
+		bottom: 0;
+		width: 390px;
+	}
 	
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
 
 }
 
+@media (max-width: 1650px) {
+.hero-bottom-sec-car {
+    position: absolute;
+    bottom: 0px;
+    width: 273px;
+}
+.hero-bottom-sec-hlc {
+    position: absolute;
+    top: 15%;
+    max-width: 271px;
+}
+}
 @media (max-width: 1599px) {
 
 	/*=========================*/
@@ -84,34 +74,6 @@
 		width: 383px;
 	}
 
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
-	/*=====================*/
-	/*  SECTION */
-	/*=====================*/
-
 }
 
 @media (max-width: 1402px) {
@@ -147,6 +109,12 @@
 		position: absolute;
 		top: 20%;
 		width: 114px;
+	}
+	.hero-bottom-sec-car {
+		position: absolute;
+		bottom: 0;
+		left: -18px;
+		width: 330px;
 	}
 	/*=====================*/
 	/*  SECTION */
@@ -219,6 +187,11 @@
     width: 533px;
     height: 468px;
     margin-left: -196px;
+}
+.hero-bottom-sec-hlc {
+    position: absolute;
+    top: 12%;
+    width: 190px;
 }
 }
 @media (max-width: 1299px) {
@@ -355,8 +328,9 @@
 	}
 	.hero-bottom-sec-hlc {
 		position: absolute;
-		top: 15%;
+		top: 9%;
 		display: none;
+		left: 0;
 	}
 	.hero-sec-extra-content-tree img {
 		position: absolute;
@@ -621,6 +595,7 @@
 		width: 113%;
 		background: inherit;
 	}
+
 	/*=====================*/
 	/*  SECTION */
 	/*=====================*/
